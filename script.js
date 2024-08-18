@@ -1,28 +1,28 @@
-const promtInput = document.getElementById('promtInput');
+const promptInput = document.getElementById('promptInput');
 const terminal = document.getElementById('terminal');
 const terminalWindow = document.getElementById('terminalWindow');
 const date = document.getElementById('date');
 
-promtInput.focus();
+promptInput.focus();
 date.innerText = new Date().toDateString()
-terminalWindow.addEventListener('click', () => promtInput.focus());
+terminalWindow.addEventListener('click', () => promptInput.focus());
 
 
-promtInput.addEventListener('keydown', (event) => {
+promptInput.addEventListener('keydown', (event) => {
   if (event.key === "Enter") {
     enterCommand(event);
   }
 })
 
 const enterCommand = (event) => {
-  const promtElement = document.getElementById('promptClone').cloneNode(true);
-  promtElement.classList.remove('hidden');
-  promtElement.getElementsByClassName('promtCloneInput')[0].innerHTML = event.target.value;
-  promtElement.setAttribute('id', null);
-  promtElement.getElementsByClassName('promtCloneContent')[0].appendChild(selectCommandBlock(event.target.value));
-  terminal.appendChild(promtElement);
-  promtInput.value = '';
-  promtInput.scrollIntoView({block: 'start'});
+  const promptElement = document.getElementById('promptClone').cloneNode(true);
+  promptElement.classList.remove('hidden');
+  promptElement.getElementsByClassName('promptCloneInput')[0].innerHTML = event.target.value;
+  promptElement.setAttribute('id', null);
+  promptElement.getElementsByClassName('promptCloneContent')[0].appendChild(selectCommandBlock(event.target.value));
+  terminal.appendChild(promptElement);
+  promptInput.value = '';
+  promptInput.scrollIntoView({block: 'start'});
 }
 
 
@@ -59,7 +59,7 @@ const clearCommand = () => {
 
 const notFoundCommand = (command) => {
   const element = document.createElement('span');
-  element.innerText = `-bash: ${command}: command not found`;
+  element.innerText = `-bash: ${command}: command not found. Type 'help' for help`;
   element.classList.add('error');
   return element;
 }

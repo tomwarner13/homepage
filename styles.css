@@ -3,6 +3,7 @@
   --background: #272A36;
   --header: #4a4a4a;
   --text: #F5F3F1;
+  --section-title: #FFA500;
   --title: #eeb7eb;
   --command: #68ff99;
   --error: #ff8383;
@@ -70,7 +71,7 @@ input:focus {
 
 
 .sectionTitle {
-  font-size: 24px;
+  color: var(--section-title);
   font-weight: 600;
 }
 
@@ -85,6 +86,11 @@ input:focus {
 }
 
 .command {
+  color: var(--command);
+  font-weight: 600;
+}
+
+.command a {
   color: var(--command);
   font-weight: 600;
 }
