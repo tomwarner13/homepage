@@ -27,7 +27,7 @@ const enterCommand = (event) => {
 
 
 const selectCommandBlock = (command) => {
-  const lowerCommand = command.toLowerCase()
+  const lowerCommand = command.split(' ')[0].toLowerCase()
   switch (lowerCommand) {
     case 'help':
     case 'about':
@@ -36,9 +36,11 @@ const selectCommandBlock = (command) => {
     case 'education':
     case 'experience':
     case 'projects':
-      return getCommandTemplate(lowerCommand);
+      return getCommandTemplate(lowerCommand); //TODO ADD CREDITS COMMAND?
     case 'clear':
       return clearCommand();
+    case 'sudo':
+      return notAuthCommand();
     default:
       return notFoundCommand(command);
   }
@@ -60,6 +62,13 @@ const clearCommand = () => {
 const notFoundCommand = (command) => {
   const element = document.createElement('span');
   element.innerText = `-bash: ${command}: command not found. Type 'help' for help`;
+  element.classList.add('error');
+  return element;
+}
+
+const notAuthCommand = (command) => {
+  const element = document.createElement('span');
+  element.innerText = `You do not have root access on this machine. The proper authorities have been notified.`;
   element.classList.add('error');
   return element;
 }
