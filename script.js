@@ -41,6 +41,8 @@ const selectCommandBlock = (command) => {
       return clearCommand();
     case 'sudo':
       return notAuthCommand();
+    case 'chill':
+      return disableAnimationsCommand();
     default:
       return notFoundCommand(command);
   }
@@ -70,5 +72,16 @@ const notAuthCommand = (command) => {
   const element = document.createElement('span');
   element.innerText = `You do not have root access on this machine. The proper authorities have been notified.`;
   element.classList.add('error');
+  return element;
+}
+
+const disableAnimationsCommand = () => {
+  var anims = document.querySelectorAll(".animation");
+  anims.forEach((a) => {
+    a.style.display = "none";
+  });
+  const element = document.createElement('span');
+  element.innerText = `Upgrading display technologies...`;
+  element.classList.add('command');
   return element;
 }

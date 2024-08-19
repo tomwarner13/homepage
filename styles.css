@@ -15,7 +15,7 @@ body {
   background-color: var(--gray);
   color: var(--text);
   font-family: 'Space Mono', monospace;
-  font-size: 14px;
+  font-size: 16px;
   height: 100vh;
 }
 
@@ -24,10 +24,12 @@ main {
   width: 1000px;
   max-width: 1000px;
   position: relative;
+  overflow: hidden;
 }
 
 .terminal {
   background-color: var(--background);
+  text-shadow: 0 0.2rem 1rem #0c7b46;
   color: var(--text);
   padding: 20px;
   border-bottom-left-radius: 5px;
@@ -233,22 +235,7 @@ box-shadow: 0 2px 6px rgba(25,25,25,0.2),
     inset 0 3px 8px rgba(64,64,64,0.05),
     inset 0 -5px 10px rgba(25,25,25,0.1);
 }
-/* TODO DELETEME
-#terminal:focus-within ~ .scanlines:before {
-  content: '';
-  display: block;
-  animation: vline calc(var(--time, 2) * 1s) linear infinite;
-}
-/*
-* MS Edge don't support focus-within and css vars
-* inside pseudo selector
-*
-@supports (-ms-ime-align:auto) {
-  .scanlines:before {
-      content: '';
-      animation: vline 3s linear infinite;
-  }
-} */
+
 @keyframes vline {
 to { transform: translate(0, 100vh)}
 }
