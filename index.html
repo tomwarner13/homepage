@@ -12,169 +12,168 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <main>
-      <div class="header"> guest@tomw: $~</div>
-      <div class="terminal" id="terminalWindow" >
-        <section id="terminal">
-          <div class="command">guest@tomw: $~ <span class="error" id="date"></span></div>
-          <div class="title">Welcome to my website!</div>
+  <main>
+    <div class="header"> guest@tomw: $~</div>
+    <div class="terminal" id="terminalWindow">
+      <section id="terminal">
 <pre>
-  .___________.  ______   .___  ___.    ____    __    ____ 
-  |           | /  __  \  |   \/   |    \   \  /  \  /   / 
-  `---|  |----`|  |  |  | |  \  /  |     \   \/    \/   /  
-      |  |     |  |  |  | |  |\/|  |      \            /   
-      |  |     |  `--'  | |  |  |  |       \    /\    /    
-      |__|      \______/  |__|  |__|        \__/  \__/     
-                                                           
-    </pre><span class="command">Type 'help' to list available commands, or 'chill' to disable animations.</span>
-        </section>
-        <div class="prompt">
-          <span class="command">guest@tomw:</span> <span class="title">$~</span> <input id="promptInput"/>
-        </div>
-      </div>
-      <div class="flicker animation"></div>
-      <div class="scanlines animation"></div>
-      <div class="noise animation"></div>
-    </main>
-    <div class="hidden" id="promptClone">
-      <span class="command">guest@tomw:</span> <span class="title">$~</span> <span class="promptCloneInput"></span>
-      <div class="promptCloneContent"></div>
-    </div>
-    <div class="hidden" id="help">
-      <div class="sectionTitle">Available commands: </div>
-      <div class="indent">
-        <div>
-          <span class="command">about</span>:
-          <div class="indent">About Me</div> 
-        </div>
-        <div>
-          <span class="command">social</span>:
-          <div class="indent">List socials</div> 
-        </div>
-        <div>
-          <span class="command">skills</span>:
-          <div class="indent">Print skills</div> 
-        </div>
-        <div>
-          <span class="command">education</span>:
-          <div class="indent">Print education (or lack thereof)</div> 
-        </div>
-        <div>
-          <span class="command">experience</span>:
-          <div class="indent">Print some experiences I've had</div> 
-        </div>
-        <div>
-          <span class="command">contact</span>:
-          <div class="indent">Print contact info</div> 
-        </div>
-        <div>
-          <span class="command">chill</span>:
-          <div class="indent">Disable animations</div> 
-        </div>
-        <div>
-          <span class="command">clear</span>:
-          <div class="indent">Clear terminal history</div> 
-        </div>
+ ______   ______     __    __                                         
+/\__  _\ /\  __ \   /\ "-./  \                                        
+\/_/\ \/ \ \ \/\ \  \ \ \-./\ \                                       
+   \ \_\  \ \_____\  \ \_\ \ \_\                                      
+    \/_/   \/_____/   \/_/  \/_/                                      
+ __     __     ______     ______     __   __     ______     ______    
+/\ \  _ \ \   /\  __ \   /\  == \   /\ "-.\ \   /\  ___\   /\  == \   
+\ \ \/ ".\ \  \ \  __ \  \ \  __<   \ \ \-.  \  \ \  __\   \ \  __<   
+ \ \__/".~\_\  \ \_\ \_\  \ \_\ \_\  \ \_\\"\_\  \ \_____\  \ \_\ \_\ 
+  \/_/   \/_/   \/_/\/_/   \/_/ /_/   \/_/ \/_/   \/_____/   \/_/ /_/ 
+                                                                      
+  </pre>    
+  <div class="command">guest@tomw: $~ <span class="error" id="date">Mon Aug 19 2024</span></div>
+  <div class="title">Welcome to my website!</div>
+  <span class="command">Type 'help' to list available commands, or 'chill' to disable animations.</span>
+      </section>
+      <div class="prompt">
+        <span class="command">guest@tomw:</span> <span class="title">$~</span> <input id="promptInput">
       </div>
     </div>
+    <div class="flicker animation"></div>
+    <div class="scanlines animation"></div>
+    <div class="noise animation"></div>
+  </main>
+  <div class="hidden" id="promptClone">
+    <span class="command">guest@tomw:</span> <span class="title">$~</span> <span class="promptCloneInput"></span>
+    <div class="promptCloneContent"></div>
+  </div>
+  <div class="hidden" id="help">
+    <div class="sectionTitle">Available commands: </div>
+    <div class="indent">
+      <div>
+        <span class="command">about</span>:
+        <div class="indent">About Me</div> 
+      </div>
+      <div>
+        <span class="command">social</span>:
+        <div class="indent">List socials</div> 
+      </div>
+      <div>
+        <span class="command">skills</span>:
+        <div class="indent">Print skills</div> 
+      </div>
+      <div>
+        <span class="command">education</span>:
+        <div class="indent">Print education (or lack thereof)</div> 
+      </div>
+      <div>
+        <span class="command">experience</span>:
+        <div class="indent">Print some experiences I've had</div> 
+      </div>
+      <div>
+        <span class="command">contact</span>:
+        <div class="indent">Print contact info</div> 
+      </div>
+      <div>
+        <span class="command">chill</span>:
+        <div class="indent">Disable animations</div> 
+      </div>
+      <div>
+        <span class="command">clear</span>:
+        <div class="indent">Clear terminal history</div> 
+      </div>
+    </div>
+  </div>
 
-    <div class="hidden" id="contact">
-      <div class="sectionTitle">Contact me: </div>
-      <div class="indent">
-        <span class="title">Proyecto 1 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
-      </div>
-      <div class="indent">
-        <span class="title">Proyecto 2 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
-      </div>
-      <div class="indent">
-        <span class="title">Proyecto 3 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
-      </div>
+  <div class="hidden" id="contact">
+    <div class="sectionTitle">Contact me: </div>
+    <div class="indent">
+      <span class="title">Email</span> - <a href="mailto:tomwarner13@gmail.com" target="_blank"><span class="command">tomwarner13@gmail.com</span> </a>
     </div>
+  </div>
 
-    <div class="hidden" id="skills">
-      <div class="sectionTitle">Skills: </div>
-      <div class="indent">
-        <div>
-          <span class="command">Programacion</span>:
-          <div class="indent">
-            <span class="title">javascript</span>
-            <span class="title">CSS</span>
-            <span class="title">HTML</span>
-            <span class="title">GIT</span>
-          </div> 
-        </div>
-        <div>
-          <span class="command">Diseño</span>:
-          <div class="indent">
-            <span class="title">Illustrator</span>
-            <span class="title">Photoshop</span>
-          </div> 
-        </div>
-        <div>
-          <span class="command">Idiomas</span>:
-          <div class="indent">
-            <span class="title">Español</span>
-            <span class="title">Ingles</span>
-            <span class="title">Chino (básico)</span>
-          </div> 
-        </div>
-      </div>
-    </div>
-
-    <div class="hidden" id="about">
-      <div class="sectionTitle">About me: </div>
+  <div class="hidden" id="skills">
+    <div class="sectionTitle">Skills: </div>
+    <div class="indent">
+      <div>
+        <span class="command">Programacion</span>:
         <div class="indent">
-          Hi! My name is <span class="command">Tom Warner</span>.
-          I'm a full-stack software engineer .NET software engineer specializing in high traffic web applications.
-        </div> 
-    </div>
-
-    <div class="hidden" id="experience">
-      <div class="sectionTitle">Experiencia: </div>
-      <div class="indent">
-        <span class="title">FullStack DEV - Empresa Full</span> - <span class="command">Julio 2020 - Hoy</span>
-        <div class="indent">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+          <span class="title">javascript</span>
+          <span class="title">CSS</span>
+          <span class="title">HTML</span>
+          <span class="title">GIT</span>
         </div> 
       </div>
-      <div class="indent">
-        <span class="title">Frontend DEV - Empresa Front</span> - <span class="command">Enero 2018 - Julio 2020</span>
+      <div>
+        <span class="command">Diseño</span>:
         <div class="indent">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+          <span class="title">Illustrator</span>
+          <span class="title">Photoshop</span>
+        </div> 
+      </div>
+      <div>
+        <span class="command">Idiomas</span>:
+        <div class="indent">
+          <span class="title">Español</span>
+          <span class="title">Ingles</span>
+          <span class="title">Chino (básico)</span>
         </div> 
       </div>
     </div>
+  </div>
 
-    <div class="hidden" id="social">
-      <div class="sectionTitle">(anti-) social media: </div>
+  <div class="hidden" id="about">
+    <div class="sectionTitle">About me: </div>
       <div class="indent">
-        <span class="title">Github</span> - <span class="command"><a href="https://github.com/tomwarner13">https://github.com/tomwarner13</a></span>
-      </div>
-      <div class="indent">
-        <span class="title">Blog</span> - <span class="command"><a href="https://biologicalspeculation.blog">https://biologicalspeculation.blog</a></span>
-      </div>
-      <div class="indent">
-        <span class="title">StackOverflow</span> - <span class="command"><a href="https://stackoverflow.com/users/5503076/tom-warner">https://stackoverflow.com/users/5503076/tom-warner</a></span>
-      </div>
-      <div class="indent">
-        <span class="title">LinkedIn</span> - <span class="command"><a href="https://www.linkedin.com/in/thomas-warner-04956867/">https://www.linkedin.com/in/thomas-warner-04956867/</a></span>
-      </div>
-    </div>
+        Hi! My name is <span class="command">Tom Warner</span>.
+        I'm a full-stack software engineer .NET software engineer specializing in high traffic web applications.
+      </div> 
+  </div>
 
-    <div class="education hidden" id="education">
-      <div class="sectionTitle">Formación: </div>
+  <div class="hidden" id="experience">
+    <div class="sectionTitle">Experiencia: </div>
+    <div class="indent">
+      <span class="title">FullStack DEV - Empresa Full</span> - <span class="command">Julio 2020 - Hoy</span>
       <div class="indent">
-        <span class="title">Ing. Informático - Universidad</span> <span class="command">Finalizado 2021</span>
-        <div class="indent">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
-        </div> 
-      </div>
-      <div class="indent">
-        <span class="title">Curso Fullstack- Online</span> <span class="command">Finalizado 2018</span>
-        <div class="indent">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
-        </div> 
-      </div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+      </div> 
     </div>
+    <div class="indent">
+      <span class="title">Frontend DEV - Empresa Front</span> - <span class="command">Enero 2018 - Julio 2020</span>
+      <div class="indent">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+      </div> 
+    </div>
+  </div>
+
+  <div class="hidden" id="social">
+    <div class="sectionTitle">(anti-) social media: </div>
+    <div class="indent">
+      <span class="title">Github</span> - <span class="command"><a href="https://github.com/tomwarner13">https://github.com/tomwarner13</a></span>
+    </div>
+    <div class="indent">
+      <span class="title">Blog</span> - <span class="command"><a href="https://biologicalspeculation.blog">https://biologicalspeculation.blog</a></span>
+    </div>
+    <div class="indent">
+      <span class="title">StackOverflow</span> - <span class="command"><a href="https://stackoverflow.com/users/5503076/tom-warner">https://stackoverflow.com/users/5503076/tom-warner</a></span>
+    </div>
+    <div class="indent">
+      <span class="title">LinkedIn</span> - <span class="command"><a href="https://www.linkedin.com/in/thomas-warner-04956867/">https://www.linkedin.com/in/thomas-warner-04956867/</a></span>
+    </div>
+  </div>
+
+  <div class="education hidden" id="education">
+    <div class="sectionTitle">Formación: </div>
+    <div class="indent">
+      <span class="title">Ing. Informático - Universidad</span> <span class="command">Finalizado 2021</span>
+      <div class="indent">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+      </div> 
+    </div>
+    <div class="indent">
+      <span class="title">Curso Fullstack- Online</span> <span class="command">Finalizado 2018</span>
+      <div class="indent">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+      </div> 
+    </div>
+  </div>
 </body>
 </html>
