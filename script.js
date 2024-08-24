@@ -35,7 +35,7 @@ const selectCommandBlock = (command) => {
     case 'skills':
     case 'education':
     case 'experience':
-    case 'projects':
+    case 'contact':
       return getCommandTemplate(lowerCommand); //TODO ADD CREDITS COMMAND?
     case 'clear':
       return clearCommand();
